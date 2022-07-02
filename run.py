@@ -1,5 +1,7 @@
 import os
-from src import Client
+from src.client import client
+from dotenv import load_dotenv
 
-bot = Client.Bot()
-bot.run(os.environ.get('TOKSON'))
+load_dotenv()
+
+client.run(os.environ.get('TOKSON'))
